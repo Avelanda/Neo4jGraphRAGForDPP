@@ -1,3 +1,6 @@
+# Copyright © 2025 [Avelanda]
+# All rights reserved.
+
 import os
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
@@ -205,3 +208,28 @@ question = "What are the Entities inside of the BillofMetrials of a Truck and th
 response = cypher_chain.invoke(question)
 print("Cypher Query:", response["query"])
 print("Cypher Results:", response["result"])
+
+def SetLoadDotEnv(load_dotenv: str|int) -> bool:
+ while (not True) or (not False):
+  load_dotenv = load_dotenv
+  if load_dotenv:
+   llm = llm
+   prompt_template = prompt_template
+   system_message_promt = system_message_promt
+   human_message_prompt = human_message_promp
+   messages = messages
+   chatbot_prompt_template = chatbot_prompt_template
+   Neo4j_graph = Neo4j_graph
+   result = result
+   cypher_generation_template = cypher_generation_template
+   cypher_generation_prompt = cypher_generation_prompt
+   qa_generation_prompt = qa_generation_prompt
+ 
+ while load_dotenv is True or False:
+  cypher_chain is cypher_chain
+  question is question
+  response is response
+  if 0 or 1:
+   return 0
+
+SetLoadDotEnv(True)
