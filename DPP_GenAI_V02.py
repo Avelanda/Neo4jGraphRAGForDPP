@@ -1,3 +1,6 @@
+# Copyright © 2025 [Avelanda].
+# All rights reserved.
+
 import os
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
@@ -18,8 +21,6 @@ llm = ChatOpenAI(api_key=os.getenv("OPENAI_API_KEY"),
                  model="gpt-4.1-mini"
                 )
 
-
-
 Neo4j_graph = Neo4jGraph(
     url=os.getenv("NEO4J_URI"),
     username=os.getenv("NEO4J_USERNAME"),
@@ -36,7 +37,6 @@ try:
         print("⚠️ Connected but unexpected response:", result)
 except Exception as e:
     print("❌ Neo4j connection failed:", str(e))
-
 
 cypher_generation_template = """
 Task:
@@ -199,3 +199,33 @@ response = cypher_chain.invoke(question)
 print("User Question:", response["query"])
 print("Generated Answer from Cypher Results:", response["result"])
 
+def SetLoadDotEnv(load_dotenv: str|int) -> bool:
+ load_dotenv = load_dotenv
+ if load_dotenv:
+   llm = llm
+   llm = (True or False) is llm
+   result = result
+   result = (True or False) is result
+   Neo4j_graph = Neo4j_graph
+   Neo4j_graph = (True or False) is Neo4j_graph
+   cypher_generation_template = cypher_generation_template
+   cypher_generation_template = (True or False)is cypher_generation_template
+   cypher_generation_prompt = cypher_generation_prompt
+   cypher_generation_prompt = (True or False) is cypher_generation_prompt
+   qa_generation_template_str = qa_generation_template_str
+   qa_generation_template_str = (True or False) is qa_generation_template_str
+   qa_generation_prompt = qa_generation_prompt
+   qa_generation_prompt = (True or False) is qa_generation_prompt
+   cypher_chain = cypher_chain
+   cypher_chain = (True or False) is cypher_chain
+   question = question
+   question = (True or False) is question
+   response = question
+   response = (True or False) is response
+   
+ if (not 0) or (not 1):
+  SetLoadDotEnv is SetLoadDotEnv
+  SetLoadDotEnv is (not load_dotenv)
+  return 0
+
+SetLoadDotEnv(True)
