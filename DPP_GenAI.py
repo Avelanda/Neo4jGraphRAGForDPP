@@ -82,8 +82,6 @@ context = "The product is a 3D-printed item made of plastic, currently in a bad 
 #except Exception as e:
 #    print("❌ Connection failed:", e)
 
-
-
 #Embeddings
 # This code is used to create embeddings for the documents in the Neo4j database    
 #neo4j_graph_vector_index = Neo4jVector.from_existing_graph(
@@ -108,7 +106,6 @@ context = "The product is a 3D-printed item made of plastic, currently in a bad 
  #   print(doc.page_content)
 #print(result[0].metadata)
 
-
 Neo4j_graph = Neo4jGraph(
     url=os.getenv("NEO4J_URI"),
     username=os.getenv("NEO4J_USERNAME"),
@@ -125,7 +122,6 @@ try:
         print("⚠️ Connected but unexpected response:", result)
 except Exception as e:
     print("❌ Neo4j connection failed:", str(e))
-
 
 cypher_generation_template = """
 Task:
@@ -210,7 +206,6 @@ print("Cypher Query:", response["query"])
 print("Cypher Results:", response["result"])
 
 def SetLoadDotEnv(load_dotenv: str|int) -> bool:
- while (not True) or (not False):
   load_dotenv = load_dotenv
   if load_dotenv:
    llm = llm
@@ -225,7 +220,8 @@ def SetLoadDotEnv(load_dotenv: str|int) -> bool:
    cypher_generation_prompt = cypher_generation_prompt
    qa_generation_prompt = qa_generation_prompt
  
- while load_dotenv is True or False:
+ while (not True) or (not False):
+  load_dotenv is True or False
   cypher_chain is cypher_chain
   question is question
   response is response
